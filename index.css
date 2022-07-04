@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #000000;
+	overflow: hidden;
+}
+
+#clock {
+	width: 80vmin;
+	height: 80vmin;
+	border-radius: 50%;
+	background-color: #2d2d33;
+	position: relative;
+	transition: opacity 300ms, transform 300ms 300ms;
+}
+
+.minuteline {
+	width: 0.6vmin;
+	height: 2vmin;
+	position: absolute;
+	top: 1vmin;
+	left: 39.7vmin;
+	background-color: #7d7d7d;
+	transform-origin: center 39vmin;
+}
+
+.minuteline.linemain {
+	width: 0.8vmin;
+	height: 3vmin;
+	position: absolute;
+	top: 1vmin;
+	left: 39.6vmin;
+	background-color: #cccccc;
+	transform-origin: center 39vmin;
+}
+
+#time3, #time6, #time9, #time12 {
+	font-size: 4vmin;
+	font-family: monospace;
+	color: #efefef;
+	display: flex;
+	width: 6vmin;
+	height: 6vmin;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	z-index: 1;
+}
+
+#time12 {
+	top: 3vmin;
+	left: 37vmin;
+}
+
+#time3 {
+	top: 37vmin;
+	right: 3vmin;
+}
+
+#time6 {
+	bottom: 3vmin;
+	left: 37vmin;
+}
+
+#time9 {
+	top: 37vmin;
+	left: 3vmin;
+}
+
+#secondhand {
+	width: 0.8vmin;
+	height: 45vmin;
+	position: absolute;
+	background-color: #4169ef;
+	top: 4vmin;
+	left: 39.6vmin;
+	z-index: 2;
+	transform-origin: center 36vmin;
+}
+
+#hourhand {
+	width: 1.6vmin;
+	height: 28vmin;
+	position: absolute;
+	background-color: #efefef;
+	top: 18vmin;
+	left: 39.2vmin;
+	z-index: 2;
+	transform-origin: center 22vmin;
+}
+
+#minutehand {
+	width: 1.2vmin;
+	height: 38vmin;
+	position: absolute;
+	background-color: #efefef;
+	top: 10vmin;
+	left: 39.4vmin;
+	z-index: 2;
+	transform-origin: center 30vmin;
+	box-shadow: 0 0 5px 2px rgba(68, 68, 68, 0.4);
+}
+
+#circle {
+	width: 6vmin;
+	height: 6vmin;
+	position: absolute;
+	top: 37vmin;
+	left: 37vmin;
+	background-color: #efefef;
+	border-radius: 50%;
+	z-index: 3;
+	box-shadow: 0 0 10px 0px rgba(68, 68, 68, 0.4);
+}
+
+#time {
+	color: #efefef;
+	font-family: 'Consolas', monospace;
+	font-size: 5vmin;
+	text-align: center;
+}
+
+#second {
+	color: #4169ef;
+}
+
+#ampm {
+	font-size: 3vmin;
+	color: #efefef;
+	padding: 0 1vmin;
+}
+
+#date {
+	padding-left: 1vmin;
+	color: #efefef;
+	font-size: 5vmin;
+	font-family: 'Consolas', monospace;
+}
